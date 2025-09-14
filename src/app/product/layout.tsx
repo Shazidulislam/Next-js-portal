@@ -1,0 +1,7 @@
+export default function ProductDetilsLayout({children}:{children:React.ReactNode}){
+    return <>
+     <nav >This My Product Navbar</nav>
+      {children}
+      <footer>This My Product footer</footer>
+    </>
+}
