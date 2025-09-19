@@ -6,8 +6,13 @@ type Props ={
 export const generateMetadata =async({params}:Props): Promise<Metadata>    =>{
 
     const id = (await params).productID
+    const title = await new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(`iphone ${id}`)
+        })
+    })
     return {
-        title:`product ${id}`
+        title:`product ${title}`
     }
 
 }
